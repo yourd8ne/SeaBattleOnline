@@ -86,8 +86,8 @@ body {
 	top: 0;
 	left: 0;
 	margin: -3px;
-	border: 3px solid #0400ff;
-	background: rgba(0, 55, 255, 0.45);
+	border: 3px solid #5c0202;
+	background: #5c02028a;
 	width: 32px;
 	height: 32px;
 }

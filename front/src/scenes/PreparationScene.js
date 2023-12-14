@@ -41,9 +41,6 @@ class PreparationScene extends Scene {
 
 		const manuallyButton = document.querySelector('[data-action="manually"]');
 		const randomizeButton = document.querySelector('[data-action="randomize"]');
-		// const simpleButton = document.querySelector('[data-computer="simple"]');
-		// const middleButton = document.querySelector('[data-computer="middle"]');
-		// const hardButton = document.querySelector('[data-computer="hard"]');
 		const randomButton = document.querySelector('[data-type="random"]');
 
 		this.removeEventListeners.push(
@@ -53,18 +50,6 @@ class PreparationScene extends Scene {
 		this.removeEventListeners.push(
 			addListener(randomizeButton, "click", () => this.randomize())
 		);
-
-		// this.removeEventListeners.push(
-		// 	addListener(simpleButton, "click", () => this.startComputer("simple"))
-		// );
-
-		// this.removeEventListeners.push(
-		// 	addListener(middleButton, "click", () => this.startComputer("middle"))
-		// );
-
-		// this.removeEventListeners.push(
-		// 	addListener(hardButton, "click", () => this.startComputer("hard"))
-		// );
 
 		this.removeEventListeners.push(
 			addListener(randomButton, "click", () =>
@@ -145,14 +130,8 @@ class PreparationScene extends Scene {
 		}
 
 		if (player.complete) {
-			// document.querySelector('[data-computer="simple"]').disabled = false;
-			// document.querySelector('[data-computer="middle"]').disabled = false;
-			// document.querySelector('[data-computer="hard"]').disabled = false;
 			document.querySelector('[data-type="random"]').disabled = false;
 		} else {
-			// document.querySelector('[data-computer="simple"]').disabled = true;
-			// document.querySelector('[data-computer="middle"]').disabled = true;
-			// document.querySelector('[data-computer="hard"]').disabled = true;
 			document.querySelector('[data-type="random"]').disabled = true;
 		}
 	}
@@ -181,18 +160,4 @@ class PreparationScene extends Scene {
 		}
 	}
 
-	// startComputer(level) {
-	// 	const matrix = this.app.player.matrix;
-	// 	const withoutShipItems = matrix.flat().filter((item) => !item.ship);
-	// 	let untouchables = [];
-
-	// 	if (level === "simple") {
-	// 	} else if (level === "middle") {
-	// 		untouchables = getRandomSeveral(withoutShipItems, 20);
-	// 	} else if (level === "hard") {
-	// 		untouchables = getRandomSeveral(withoutShipItems, 40);
-	// 	}
-
-	// 	this.app.start("computer", untouchables);
-	// }
 }
