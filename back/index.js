@@ -41,10 +41,4 @@ io.on("connection", (socket) => {
 		io.emit("playerCount", io.engine.clientsCount);
 	});
 
-	// // Поиск случайного соперника
-	// socket.on("findRandomOpponent", () => {
-	// 	socket.emit("statusChange", "randomFinding");
-
-	// 	pm.playRandom(socket);
-	// });
 });
